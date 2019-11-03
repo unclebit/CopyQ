@@ -1,3 +1,4 @@
+---
 sudo: required
 language: cpp
 
@@ -22,9 +23,9 @@ matrix:
         - COPYQ_TESTS_SKIP_ITEMENCRYPT=1
 
 cache:
-    apt: true
-    ccache: true
-    directories:
+  apt: true
+  ccache: true
+  directories:
     - $HOME/.wheelhouse
 
 # Don't omit tags (default is git --depth=50).
