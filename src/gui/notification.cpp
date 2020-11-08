@@ -120,7 +120,7 @@ void Notification::setTitle(const QString &title)
 void Notification::setMessage(const QString &msg, Qt::TextFormat format)
 {
     if (format == Qt::PlainText)
-        m_message = msg.toHtmlEscaped();
+        m_message = QString(R"(<span allow_breaks="false">%1</span>)").arg(msg.toHtmlEscaped());
     else
         m_message = msg;
 }
